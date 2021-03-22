@@ -43,7 +43,8 @@ ui <- fluidPage(
                  c("Classical (imputed)" = "classical",
                    "Classical (imputed) + original variables" = "original",
                    "Event details" = "events",
-                   "Classical (not imputed) + original variables" = "not_imp")),    
+                   "Classical (not imputed) + original variables" = "not_imp"),
+                 selected = "original"),    
     
     br(),
     br(),
@@ -123,10 +124,15 @@ server <- function(input, output, session) {
                            }
                 )
 
+            try(closure(final))
+            
             openxlsx::write.xlsx(final, file)
         }
+        
+        
+        
     )
     
 }
 # Run the application
-shinyApp(ui = ui, server = server)
+# shinyApp(ui = ui, server = server)
