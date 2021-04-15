@@ -7,8 +7,8 @@ source("https://raw.githubusercontent.com/pqstri/MuSC-19_tools/master/visualizat
 source("https://raw.githubusercontent.com/pqstri/MuSC-19_tools/master/outcome_vert.R")
 source("https://raw.githubusercontent.com/pqstri/MuSC-19_tools/master/imputation.R")
 
-max.file.size.MB <- 15
-options(shiny.maxRequestSize = max.file.size.MB * 1024^2)
+# max.file.size.MB <- 15
+# options(shiny.maxRequestSize = max.file.size.MB * 1024^2)
 
 ui <- fluidPage(
     title = "MuSC-19 conversion tool",
